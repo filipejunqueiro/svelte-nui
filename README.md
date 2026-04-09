@@ -63,8 +63,8 @@ console.log(resourceName());
 ## Development
 
 ```bash
-bun install
-bun run build
+pnpm install
+pnpm run build
 ```
 
 ## License
