@@ -1,7 +1,7 @@
 const inBrowser = (): boolean => {
-  if (typeof window !== "undefined" && (window as any).invokeNative) return true;
+  if ((window as any).invokeNative) return false;
 
-  return false;
+  return true;
 };
 
 export default inBrowser;
