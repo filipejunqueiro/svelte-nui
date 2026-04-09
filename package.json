@@ -1,6 +1,6 @@
 {
   "name": "svelte-nui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight, fully type-safe NUI bridge for FiveM and Svelte",
   "license": "LGPL-3.0-or-later",
   "author": "Filipe Junqueiro",
