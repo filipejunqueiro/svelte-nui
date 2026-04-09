@@ -1,6 +1,6 @@
-export interface ISendArgs<T = unknown> {
+export interface ISendArgs<TResponse = unknown> {
   action: string;
-  mockData?: T;
+  mockData?: TResponse;
   autoFetch?: boolean;
 }
 

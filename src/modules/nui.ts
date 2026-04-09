@@ -43,7 +43,7 @@ class nui {
     action,
     mockData,
     autoFetch = false,
-  }: ISendArgs<TSend>) {
+  }: ISendArgs<TResponse>) {
     if (!action.trim()) throw new Error(`[ERROR]: Invalid or missing event name`);
 
     const state = $state({
