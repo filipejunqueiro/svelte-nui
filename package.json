@@ -1,6 +1,6 @@
 {
   "name": "svelte-nui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight, fully type-safe NUI bridge for FiveM and Svelte",
   "license": "LGPL-3.0-or-later",
   "author": "Filipe Junqueiro",
@@ -14,25 +14,30 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
     "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "vp pack",
-    "dev": "vp pack --watch",
+    "build": "svelte-package -i src -o dist",
+    "dev": "vp run build --watch",
     "test": "vp test",
-    "check": "vp check",
+    "check": "vp check --fix",
     "prepublishOnly": "vp run build",
     "prepare": "vp config"
   },
   "devDependencies": {
+    "@sveltejs/package": "^2.5.7",
     "@types/node": "^25.5.2",
     "@typescript/native-preview": "7.0.0-dev.20260328.1",
     "bumpp": "^11.0.1",
-    "typescript": "^6.0.2",
+    "typescript": "^5.9.3",
     "vite-plus": "^0.1.16"
   },
   "peerDependencies": {
